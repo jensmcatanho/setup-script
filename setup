@@ -7,6 +7,28 @@ echo "------------------------------------------------------------- Installing G
 apt-get install git
 
 echo "------------------------------------------------------------- Configuring Git"
+echo -n "Setting username... "
 git config --global user.name "Jean Catanho"
+echo "[OK]"
+echo -n "Setting user e-mail... "
 git config --global user.email contato@jeancatanho.com
+echo "[OK]"
 
+# Go
+## Setup
+echo "------------------------------------------------------------- Downloading Go"
+wget "https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz"
+echo "------------------------------------------------------------- Installing Go"
+echo -n "Extracting files... "
+tar -C /usr/local -xzf go1.9.linux-amd64.tar.gz
+rm go1.9.linux-amd64.tar.gz
+echo "[OK]"
+echo -n "Setting path... "
+export PATH=$PATH:/usr/local/go/bin
+echo "[OK]"
+echo -n "Creating workspace directory... "
+cd $HOME/go/src/
+mkdir jensmcatanho
+echo "[OK]"
+
+## Packages
