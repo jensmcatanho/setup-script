@@ -1,0 +1,12 @@
+#!/bin/bash
+clear
+
+# Git
+## Setup
+echo "------------------------------------------------------------- Installing Git"
+apt-get install git
+
+echo "------------------------------------------------------------- Configuring Git"
+git config --global user.name "Jean Catanho"
+git config --global user.email contato@jeancatanho.com
+
